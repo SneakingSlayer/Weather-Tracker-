@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Daily Weather</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" href="style/app.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="site-wrapper">
+		<div class="site-header">
+			<nav class="top-nav">
+				<div class="navbrand">
+					<span>wider.</span>
+				</div>
+				<ul class="nav-list">
+					<li class="list-item">
+						<div class="nav-search">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</div>
+					</li>
+					<li class="list-item list-button"><button class="app-btn">Get App</button></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="weather-body">
+			<div class="body-content">
+				<div class="current-weather">
+					<div class="cw-left">
+						<div class="stat-container cloud">
+							<span class="cloud-icon"></span>
+							<div class="cwl-right">
+								<span class="location desc"></span>
+								<span class="cloud-desc header"></span>
+							</div>
+						</div>
+						<div class="stat-container">
+							<div class="cwl-ico">
+
+								<i class="fas fa-thermometer-half"></i>
+							</div>
+							<div class="cwl-right">
+								<span class="desc">Celsius</span>
+								<span class="temperature header"></span>
+							</div>	
+						</div>
+						<div class="stat-container">
+							<div class="cwl-ico">
+								<i class="fas fa-calendar-week"></i>
+							</div>
+							<div class="cwl-right">
+								<span class="date-main desc"></span>
+								<span class="dn-main header"></span>
+							</div>
+						</div>
+					</div>
+					<div class="cw-right">
+						<div class="stat-container">
+							<div class="stat-ico">
+								<i class="fas fa-tint"></i>
+							</div>
+							<div class="cwr-right">
+								<span class="desc">Humidity</span>
+								<span class="humidity header"></span>
+							</div>
+						</div>
+						<div class="stat-container">
+							<div class="stat-ico">
+								<i class="fas fa-plane"></i>
+							</div>
+							<div class="cwr-right">
+								<span class="desc">Air Pressure</span>
+								<span class="air-pressure header"></span>
+							</div>
+						</div>
+						<div class="stat-container">
+							<div class="stat-ico">
+								<i class="fas fa-wind"></i>
+							</div>
+							<div class="cwr-right">
+								<span class="desc">Wind Speed</span>
+								<span class="wind-speed header"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tabs">
+				    <div role="tablist" aria-label="Forecasts">
+					    <button role="tab" aria-selected="true" id="daily">Daily</button>
+					    <button role="tab" aria-selected="false" id="hrly">Hourly</button>
+				    </div>
+				    <div role="tabpanel" aria-labelledby="daily">
+						<div class="daily-cast">
+				 			<!--DAILY CASTS GOES HERE-->
+						</div>
+				    </div>
+				   	<div  role="tabpanel" aria-labelledby="hrly" hidden>
+				   		<div class="hrly-group">
+					   		<div class="scroll-cont">
+					   			<button class="left-button"><i class="fas fa-angle-left"></i></button>
+					   		</div>
+					        <div class="hourly-cast">
+					 			<!--DAILY CASTS GOES HERE-->
+							</div>
+							<div class="scroll-cont">
+					   			<button class="right-button"><i class="fas fa-angle-right"></i></button>
+					   		</div>
+				   		</div>
+				    </div>
+  				</div>
+			</div>
+		</div>
+
+		<div class="ad-sec">
+			<div class="ad-body">
+				<div class="body-left">
+					<span class="header-ad">Wanna know about COVID-19?</span>
+					<div class="par-sec">
+						<p class="bl-par">The Coronavirus Disease 2019 (COVID-19) is an infectious disease that was induced by a new type of coronavirus that spreads when an infected person coughs and sneezes droplets of nasal droplets or saliva (WHO, 2020).</p>
+					</div>
+					<button>Learn more</button>
+				</div>
+				<div class="body-right">
+					<div class="total-cont cont">
+						<i class="fas fa-syringe"></i>
+						<div class="cont-txt">
+							<span class="cases-lbl lbl">All Cases</span>
+							<span class="total-cases ttl"></span>
+						</div>
+					</div>
+					<div class="deaths-cont  cont">
+						<i class="fas fa-skull-crossbones"></i>
+						<div class="cont-txt">
+							<span class="deaths-lbl lbl">Deaths</span>
+							<span class="deaths ttl"></span>
+						</div>
+					</div>
+					<div class="rec-cont cont">
+						<i class="fas fa-plus-square"></i>
+						<div class="cont-txt">
+							<span class="rec-lbl lbl">Recoveries</span>
+							<span class="recoveries ttl"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class = "partners-container" id="partners">
+            <div class = "partners-wrapper">
+            	<span class = "sec-title">
+					Powered By
+				</span>
+				<div class="items-wrapper">
+	                <div class = "partners-item">
+	                    <img src = "assets/img/apilayer.svg">
+	                </div>
+	                <div class = "partners-item">
+	                    <img src = "assets/img/bdc.svg">
+	                </div>
+	                <div class = "partners-item">
+	                    <img src = "assets/img/covid.png">
+	                </div>
+	                <div class = "partners-item">
+	                    <img src = "assets/img/ipify(1).png">
+	                </div>
+	                <div class = "partners-item">
+	                    <img src = "assets/img/weather.png">
+					</div>
+	            </div>
+            </div>
+        </div>
+
+		<footer class="site-footer">
+			<div class = "footer-body">
+				<span>Created by <a>Baby Boys corp.</a></span>
+				<b>wider.<small> © 2021</small></b>
+				<div class = "footer-socmedia">
+					<a><i class="fa fa-instagram"></i></a>
+					<a><i class="fa fa-twitter"></i></a>
+					<a><i class="fa fa-facebook-square"></i></a>
+					<a><i class="fa fa-google" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</footer>
+
+		<div class="loader-cont">
+			<div class="loader-body">
+				<div class="loadingio-spinner-rolling-n26lvt5of6i">
+					<div class="ldio-fc972xpe3op">
+						<div>
+						</div>
+					</div>
+				</div>
+				<div class="loader-desc">
+					<span>Fetching data...</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="scripts/main.js"></script>
+	<script src="https://kit.fontawesome.com/28dbaa6ba2.js" crossorigin="anonymous"></script>
+</body>
+</html>
